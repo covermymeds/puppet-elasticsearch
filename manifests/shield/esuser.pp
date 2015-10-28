@@ -26,5 +26,6 @@ define elasticsearch::shield::esuser($username, $password, $roles=$title) {
     path    => [ '/usr/bin', '/usr/share/elasticsearch/bin/shield' ],
     command => "esusers useradd ${username} -p \"${password}\" -r ${roles} &> /dev/null",
     unless  => "esusers list ${username} &> /dev/null",
+    user    => $elasticsearch::elasticsearch_user,
   }
 }
