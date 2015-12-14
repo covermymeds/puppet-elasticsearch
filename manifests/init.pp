@@ -416,6 +416,7 @@ class elasticsearch(
     -> Class['elasticsearch::config']
     -> Elasticsearch::Instance <| |>
     -> Elasticsearch::Template <| |>
+    -> Define['elasticsearch::shield::esuser']
 
   } else {
 
