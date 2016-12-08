@@ -408,6 +408,7 @@ class elasticsearch(
   $daily_rolling_date_pattern     = $elasticsearch::params::daily_rolling_date_pattern,
   $rolling_file_max_backup_index  = $elasticsearch::params::rolling_file_max_backup_index,
   $rolling_file_max_file_size     = $elasticsearch::params::rolling_file_max_file_size,
+  $enforce_sysctl                 = true,
 ) inherits elasticsearch::params {
 
   anchor {'elasticsearch::begin': }
